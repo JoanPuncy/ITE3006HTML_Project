@@ -1,0 +1,270 @@
+body { 
+	margin: 0px; 
+	font-family: Georgia;
+	background-color: black;
+	color: gold;
+}
+
+#header, #list, #info, #form, #footer {  
+	background: navy; 
+	border: 1px solid black; 
+	border-radius: 8px; 
+	margin: 5px; 
+	padding: 15px; 
+} 
+
+#flex-container { 
+	display: flex; 
+	flex-flow: row wrap; 
+} 
+
+/* header */
+#header { 
+	text-align: center;
+	height: 100px; 
+	width: 100%; 
+	order:1;
+} 
+#header font {
+	color: white;
+}
+#header div { 
+	clear: none; 
+} 
+
+/* info */
+#info a{
+	text-decoration: none;
+}
+#info a:hover{
+	color: white;
+}
+
+/* list */
+#list { 
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	order:2;
+} 
+.menu {
+	text-align: center;
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	width: 150px;
+	background-color: gold;
+	text-align: center;
+	text-shadow: 2px 2px 2px silver;
+	border-radius: 10px;
+	display: inline-block;
+}
+.menu a{
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: 10px 20px;
+	line-height: 1.2em;
+	color: black;
+	display: block;
+}
+.menu a:hover{
+	background-color: gold;
+	color: white;
+}
+/* List Order */
+.menu .ALS {
+	position: absolute;
+	top: 250px;
+	background-color: #E9E1DB;
+	box-shadow: 10px 10px 5px black;
+	transform: rotate(-10deg)
+}
+.ALS a:hover{
+	background-color: #8E2469;
+}
+.ALS li{
+	overflow: hidden;
+	height: 0px;
+	transition: height 500ms;
+}
+li:hover .ALS li{
+	height: 40px;
+}
+/* List Ifomation */
+#info { 
+	color: navy;
+	text-align: center;
+	height: auto; 
+	background: gold; 
+	width: 30px; 
+	flex-grow:1;
+	order:3;
+} 
+#info table{
+	color: navy;
+}
+
+/* from */
+#form { 
+	width: 300px; 
+	height: 980px;
+	order:4;
+} 
+#form a{
+	text-decoration: none;
+	color: gold;
+}
+#form a:hover{
+	color: white;
+}
+fieldset { 
+	border-radius: 10px; 
+}
+
+/* footer */
+#footer { 
+	display: none;
+	height: 25px; 
+	width: 100%;
+	text-align: right;	
+	order:5;
+}
+
+/* <1000px */
+@media only screen and (max-width: 1000px) { 
+	body {color: navy;}
+	#header, #list, #info, #form, #footer {  
+		background: gold;
+	}
+	#header font {
+		color: black;
+	}
+	
+	/* List */
+	#list { 
+		width: 100%;
+		height: auto;
+		background-color: gold;
+	}
+	
+	/* Menu */
+	.menu {
+		text-align: center;
+	}
+	.menu ul{
+		background-color: navy;
+	}
+	.menu a{
+		color: white;
+	}
+	.menu a:hover{
+		background-color: gold;
+		color: black;
+	}
+	.menu .ALS {
+		top: 200px;
+	}
+	.ALS a:hover{
+		background-color: #8E2469;
+	}
+	
+	/* Pruchase Ifomation */
+	#info { 
+		width: 100%; 
+		background: navy;
+		color: gold;
+	}
+	#info table {
+		color: gold;
+	}
+	#info a {
+		color: gold;
+	}
+	#info u {
+		color: gold;
+	}
+	
+	/* Pruchase Form */
+	#form { 
+		width: 100%; 
+		height: auto;
+	}
+	#form form {
+		text-align: center;
+	}
+	#form table {
+		text-align: center;
+		margin-left: 25%;
+	}
+	#form a {
+		color: navy;
+	}
+	
+	/* footer */
+	#footer {
+		display: inline-block;
+		background-color: navy;
+		color: gold;
+	}
+} 
+
+/* <800px */
+@media only screen and (max-width: 800px) {  
+	body {color: gold;}
+	#header, #list, #info, #form, #footer {  
+		background: navy;
+	}
+	#header font {
+		color: white;
+	}
+	
+	/* List */  
+	#list { 
+		background-color: gold;
+		order: 3; 
+	}
+	
+	/* Menu */
+	.menu {
+		text-align: center;
+	}
+	.menu ul{
+		background-color: navy;
+	}
+	.menu a{
+		color: white;
+	}
+	.menu a:hover{
+		background-color: gold;
+		color: black;
+	}
+	.menu .ALS {
+		top: 200px;
+	}
+	.ALS a:hover{
+		background-color: #8E2469;
+	}
+	
+	/* Pruchase Ifomation */
+	#info { 
+		order: 4;
+	} 
+	
+	/* Pruchase Form */
+	#form {
+		order: 2;
+	}
+	#form table{
+		width: 50%;
+	}
+	
+	/* footer */
+	#footer {
+		background-color: gold;
+		color: navy;
+	}
+} 

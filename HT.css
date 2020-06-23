@@ -1,0 +1,214 @@
+body {
+	margin: 0px; 
+	font-family: Georgia;
+	background-color: black;
+	color: gold;
+ }
+i {
+	color: white;
+}
+ 
+#header, #nav, #minfo, #mvinfo, #footer {  
+	background: navy; 
+	border: 1px solid black; 
+	border-radius: 8px; 
+	margin: 5px; 
+	padding: 15px; 
+} 
+
+#flex-container { 
+	display: flex; 
+	flex-flow: row wrap; 
+} 
+
+/* header */
+#header { 
+	text-align: center;
+	height: 100px; 
+	width: auto; 
+	order:1;
+} 
+#header div { 
+	clear: none; 
+}
+
+/* nav */
+#nav {
+	background-color: gold;
+	order:2;
+}
+
+/* Menu */
+.menu {
+	text-align: center;
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: navy;
+	text-align: center;
+	text-shadow: 2px 2px 2px silver;
+	border-radius: 10px;
+	display: inline-block;
+}
+.menu a{
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: 10px 20px;
+	line-height: 1.2em;
+	color: white;
+	display: block;
+}
+.menu a:hover{
+	background-color: gold;
+	color: black;
+}
+/* Member Ifomation */
+.menu .mi {
+	position: absolute;
+	top: 200px;
+	background-color: #E9E1DB;
+	box-shadow: 10px 10px 5px black;
+	transform: rotate(-10deg)
+}
+.mi a:hover{
+	background-color: #8E2469;
+}
+.mi li{
+	overflow: hidden;
+	height: 0px;
+	transition: height 500ms;
+}
+li:hover .mi li{
+	height: 40px;
+}
+ 
+/* Music Videos */
+.menu .mv {
+	position: absolute;
+	top: 200px;
+	background-color: #E9E1DB;
+	box-shadow: 10px 10px 5px black;
+	transform: rotate(-10deg)
+}
+.mv a:hover{
+	background-color: #8E2469;
+}
+.mv li{
+	overflow: hidden;
+	height: 0px;
+	transition: height 500ms;
+}
+ li:hover .mv li{
+	height: 40px;
+}
+ /* Reality TV Shows */
+.menu .rtv {
+	position: absolute;
+	top: 200px;
+	background-color: #E9E1DB;
+	box-shadow: 10px 10px 5px black;
+	transform: rotate(-10deg)
+}
+.rtv a:hover{
+	background-color: #8E2469;
+}
+.rtv li{
+	overflow: hidden;
+	height: 0px;
+	transition: height 500ms;
+}
+ li:hover .rtv li{
+	 height: 40px;
+}
+
+/* Minfo */
+  #Minfo {
+	height: auto;
+	width: auto;
+	order:3;
+ }
+ /* Table: VIXX Infomation */
+#Minfo table {
+	text-align: center;
+	width: 100%;
+	border: 0px solid black;
+	border-collapse: collapse;
+	border-bottom-color: gold;
+	margin-left: auto;
+	margin-right: auto;
+}
+#Minfo a{
+	text-decoration: none;
+	color: gold;
+}
+#Minfo a:hover{
+	color: white;
+}
+
+/* footer */
+#footer { 
+	height: 25px; 
+	width: auto;
+	text-align: right;
+	order:4;
+}
+
+/* >1000px */
+@media only screen and (min-width: 1000px) { 
+	body {color: navy;}
+	#header, #nav, #minfo, #mvinfo, #footer {  
+		background: gold;
+	}
+	i {
+		color: black;
+	}
+	
+	/* nav */
+	#nav {
+		width: 150px; 
+		background-color: navy;
+	}
+	.menu ul{
+		background-color: gold;
+		flow-direction: collapse;      
+		justify-content: space-around;
+		margin-bottom: 10px;
+	}
+	.menu a{
+		color: black;
+	}
+	.menu a:hover{
+		background-color: navy;
+		color: white;
+	}
+	.menu .mi {
+		margin-left: 100px;
+	}
+	.mi a:hover{
+		background-color: #8E2469;
+	}
+	.menu .mv {
+		margin-left: 300px;
+	}
+	.mv a:hover{
+		background-color: #8E2469;
+	}
+	.menu .rtv {
+		margin-left: 500px;
+	}
+	.rtv a:hover{
+		background-color: #8E2469;
+	}
+	
+	/* Minfo */
+	#Minfo {
+		margin-left: 200px;
+	}
+	#Minfo a{
+		color: navy;
+	}
+}

@@ -1,0 +1,179 @@
+body { 
+	margin: 0px; 
+	font-family: Georgia;
+	background-color: black;
+	color: gold;
+}
+
+#header, #nav, #main, #info, #footer {  
+	background: navy; 
+	border: 1px solid black; 
+	border-radius: 8px; 
+	margin: 5px; 
+	padding: 15px; 
+} 
+
+#flex-container { 
+	display: flex; 
+	flex-flow: row wrap; 
+} 
+
+/* header */
+#header { 
+	text-align: center;
+	height: 100px; 
+	width: 100%; 
+	order:1;
+} 
+#header font {
+	color: white;
+}
+#header div { 
+	clear: none; 
+} 
+
+/* nav */
+#nav { 
+	width: 100px;
+	text-align: center;
+	order:2;
+} 
+.sub{
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+.sub a{
+	text-decoration: none;
+	/* hidden href unline */
+	color: white;
+  }
+.sub a:hover{
+	text-decoration: none;
+	/* hidden href unline */
+	background-color: gold;
+	color: navy;
+  }
+  
+/* main */
+#main { 
+	color: black;
+	text-align: center;
+	height: 350px; 
+	background: gold; 
+	width: 30px; 
+	flex-grow:1;
+	order:3;
+} 
+#main img { 
+	height: 200px;
+	width: 300px;
+	text-align: center;
+	float: left;
+	margin-right : 10px; 
+} 
+#main p {
+	column-count:2;
+	/* 分兩段 */
+}
+
+/* info */
+#info { 
+	width: 100px; 
+	order:4;
+} 
+#info img {
+	height: 100px;
+	width: 100px;
+	clear:right;
+}
+/* text */
+#info h4 {
+	text-align: center;
+}
+#info p {
+	text-align: center;
+}
+#info font {
+	color: white;
+}
+
+/* footer */
+#footer { 
+	height: 25px; 
+	width: 100%;
+	text-align: right;	
+	order:5;
+}
+
+/* <1000px */
+@media only screen and (max-width: 1000px) { 
+	body {color: navy;}
+	#header, #nav, #main, #info, #footer {  
+		background: gold;
+	}
+	#header font {
+		color: black;
+	}
+	#nav { 
+		order: 4; 
+		width: 100px;
+	}
+	.sub a{
+		color: black;
+	}
+	.sub a:hover{
+		background-color: navy;
+		color: gold;
+	}
+	#main { 
+		height: auto; 
+		background: navy;
+		color: gold;
+	}
+	#main img { 
+		display: none; 
+	} 
+	#info { 
+		order: 2; 
+		width: 100px;
+	}
+	#info font {
+		color: black;
+	}
+} 
+
+/* <800px */
+@media only screen and (max-width: 800px) {  
+	body {color: gold;}
+	#header, #nav, #main, #info, #footer {  
+		background: navy;
+	}
+	#header font {
+		color: white;
+	}
+	#nav { 
+		order: 4; 
+		width: 100%; 
+	}   
+	#nav ul {  
+		display: flex; 
+		flow-direction: row;      
+		justify-content: space-around; 
+	}
+	.sub a{
+		color: white;
+	}
+	.sub a:hover{
+		background-color: gold;
+		color: navy;
+	}	
+	#main { 
+		height: auto; 
+		background: gold;
+		color: navy;
+	} 
+	#info { 
+		display: none; 
+	} 
+} 

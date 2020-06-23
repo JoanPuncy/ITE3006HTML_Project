@@ -1,0 +1,238 @@
+body { 
+	margin: 0px; 
+	font-family: Georgia;
+	background-color: black;
+	color: gold;
+}
+
+#header, #nav, #main, #fc, #footer {  
+	background: navy; 
+	border: 1px solid black; 
+	border-radius: 8px; 
+	margin: 5px; 
+	padding: 15px; 
+} 
+
+#flex-container { 
+	display: flex; 
+	flex-flow: row wrap; 
+} 
+
+/* header */
+#header { 
+	text-align: center;
+	height: 100px; 
+	width: 100%; 
+	order:1;
+} 
+#header font {
+	color: white;
+}
+#header div { 
+	clear: none; 
+} 
+
+/* main */
+#main { 
+	color: navy;
+	text-align: center;
+	height: auto; 
+	background: gold; 
+	width: 60%; 
+	flex-grow:1;
+	order:2;
+} 
+#main table {
+	color: navy;
+}
+#main a {
+	color: navy;
+	text-decoration: none;
+}
+#main a:hover{
+	color: silver;
+}
+#main video { 
+	width: 500;
+	height; 300;
+}
+
+/* nav */
+#nav { 
+	height: 250px;
+	width: 20%;
+	text-align: center;
+	order:3;
+} 
+.menu {
+	text-align: center;
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	width: 150px;
+	background-color: gold;
+	text-align: center;
+	text-shadow: 2px 2px 2px silver;
+	border-radius: 10px;
+	display: inline-block;
+}
+.menu a{
+	text-decoration: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding: 10px 20px;
+	line-height: 1.2em;
+	color: black;
+	display: block;
+}
+.menu a:hover{
+	background-color: navy;
+	color: white;
+}
+/* Music Festival */
+.menu .mf {
+	position: absolute;
+	top: 250px;
+	background-color: #E9E1DB;
+	box-shadow: 10px 10px 5px black;
+	transform: rotate(-10deg)
+}
+.mf a:hover{
+	background-color: #8E2469;
+}
+.mf li{
+	overflow: hidden;
+	height: 0px;
+	transition: height 500ms;
+}
+li:hover .mf li{
+	height: 40px;
+}
+
+/* from */
+#fc { 
+	width: 100%; 
+	height: auto;
+	order:4;
+} 
+#fc a{
+	text-decoration: none;
+	color: gold;
+}
+#fc a:hover{
+	color: white;
+}
+fieldset { 
+	border-radius: 10px; 
+}
+
+/* footer */
+#footer { 
+	height: 25px; 
+	width: 100%;
+	background-color: gold;
+	color: navy;
+	text-align: right;	
+	order:5;
+}
+
+/* <1000px */
+@media only screen and (max-width: 1000px) { 
+	body {color: navy;}
+	#header, #nav, #main, #fc, #footer {  
+		background: gold;
+	}
+	#header, #footer{
+		background: navy;
+		color: gold;
+	}
+	#header font {
+		color: white;
+	}
+	/* main */
+	#main { 
+		color: gold;
+		background: navy; 
+		width: 100%;
+		order: 3;
+	} 
+	#main table {
+		color: gold;
+	}
+	#main a {
+		color: gold;
+		text-decoration: none;
+	}
+	/* nav */
+	#nav { 
+		width: 100%;
+		height: 150px;
+		order: 2; 
+	}
+	.menu {
+		text-align: center;
+	}
+	.menu ul{
+		background-color: navy;
+	}
+	.menu a{
+		color: white;
+	}
+	.menu a:hover{
+		background-color: gold;
+		color: black;
+	}
+	/* Music Festival */
+	.menu .mf {
+		background-color: #E9E1DB;
+	}
+	.mf a:hover{
+		background-color: #8E2469;
+	}
+	/* from */
+	#fc a{
+		text-decoration: none;
+		color: navy;
+	}
+	#fc a:hover{
+		color: white;
+	}
+} 
+
+/* <800px */
+@media only screen and (max-width: 800px) { 
+	#main{
+		order: 4;
+		color: navy;
+		background: gold; 
+	}
+	#main table {
+		color: navy;
+	}
+	#main a {
+		color: navy;
+	}
+	/* from */
+	#fc {
+		order: 3;
+		color: gold;
+		background-color: navy;
+	}
+	#fc table {
+		color: gold;
+	}
+	#fc a{
+		text-decoration: none;
+		color: gold;
+	}
+	#fc a:hover{
+		color: black;
+	}
+	/* footer */
+	#footer {
+		display:none;
+	}
+}
